@@ -1,0 +1,140 @@
+.head-line {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.head-line svg {
+    width: 430px;
+}
+
+.hamburger {
+    display: none;
+}
+.search-area{
+    position:absolute;
+    top:50px;
+    right:0;
+
+}
+#search {
+    border: none;
+    border-bottom: 2px solid #000; /* underline */
+    outline: none; /* 포커스 시 기본 테두리 제거 */
+    padding: 5px;
+    width: 150px; /* 원하는 크기로 설정 */
+}
+#search-button {
+    border: none;
+    background: none;
+}
+
+#search-button:hover{
+    background-color: #ebebeb;
+    border-radius: 8px;
+}
+.menus {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 4px double #000;
+    position: relative; 
+    height: auto;
+}
+
+.menus button {
+    border: none;
+    background: none;
+    margin: 5px;
+}
+
+.menus button:hover {
+    background-color: #ebebeb;
+    border-radius: 8px;
+}
+
+.news-img-size {
+    max-width: 100%;
+    max-height: 250px;
+}
+
+.news {
+    border-bottom: 2px solid #000;
+}
+.search-area{
+    display:flex;
+    justify-content: flex-end;
+}
+.alert{
+    z-index:1;
+}
+@media only screen and (max-width: 768px) {
+    .search-area{
+        position: static;
+        display: flex;
+
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position:absolute;
+        top:70px;
+        left:0;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #000;
+        margin: 6px 0;
+    }
+
+    .menus {
+        height: 0px;
+        position: absolute;
+        align-items: center;
+        top: 93px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #ffffff;
+        transition: 0.2s;
+        overflow: hidden;
+        flex-direction: column;
+        border-bottom: 1px solid #ebebeb;
+        z-index:10;
+    }
+
+    .menus.active {
+        height: 260px;
+    }
+
+    .menus button {
+        display: block;
+        width: fit-content;
+        margin: 10px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .menus.active button {
+        opacity: 1;
+    }
+}
+.pagination {
+    display: flex;
+    justify-content: center;  /* 가운데 정렬 */
+    padding: 1em 0;
+}
+
+.pagination .page-item .page-link {
+    color: #000;
+    border: #ebebeb;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ebebeb;
+}
